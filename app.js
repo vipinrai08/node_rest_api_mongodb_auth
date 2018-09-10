@@ -45,7 +45,7 @@ app.use((error,req,res,next) =>{
     });
 });
 
-var port = process.env.PORT || 3001;
+var port = process.env.PORT || 3000;
 app.use((req, res, next) => {
     res.status(200).json({
         message: 'its work!'

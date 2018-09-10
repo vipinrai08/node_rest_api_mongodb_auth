@@ -1,5 +1,5 @@
  var jwt = require('jsonwebtoken');
-module.exports = (requ, res, next) => {
+module.exports = (req, res, next) => {
     try {
         var token = token.headers.authorization.split(" ")[1];
         var decoded = jwt.verify(token, procees.env.JWT_KEY);
