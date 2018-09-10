@@ -45,12 +45,12 @@ app.use((error,req,res,next) =>{
     });
 });
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3001;
 app.use((req, res, next) => {
     res.status(200).json({
         message: 'its work!'
     });
 });
 app.listen(port,function(){
-    console.log('running rest-shop on port' +port)
+    console.log('running api-demo on port' +port)
 });
