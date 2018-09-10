@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha app/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'",
     "start": "nodemon app.js"
   },
   "author": "",
@@ -12,6 +13,8 @@
   "dependencies": {
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.13",
