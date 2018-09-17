@@ -3,19 +3,21 @@ var should = chai.should();
 var Product = require('../models/product');
 var Order = require('../models/order');
 var User = require('../models/user');
+process.env.NODE_ENV = "testing";
 
 
 describe('User Model', function() {
 	it('should create a new user', function(done) {
-         if(user.length <1)
-		var user = new User({
-			email: 'test@gmail.com',
-			password: 'password'
-		});
-		user.save(function(err) {
-			if (err) return done(err);
-			done();
-		});
+        if(user.length <1) {
+			var user = new User({
+				email: 'test@gmail.com',
+				password: 'password'
+			});
+			user.save(function(err) {
+				if (err) return done(err);
+				done();
+			});
+		}
     });
 
      it('should email string', function () {

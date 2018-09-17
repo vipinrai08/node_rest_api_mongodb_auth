@@ -3,7 +3,7 @@ var app = express();
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/restshop');
+mongoose.connect('mongodb://localhost/api-demo');
 var db = mongoose.connection;
 
 
